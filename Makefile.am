@@ -1,13 +1,15 @@
+AM_CFLAGS = -Ilibdivsufsort/include
+
 bin_PROGRAMS = bsdiff bspatch
 
 bsdiff_SOURCES = bsdiff.c
 
 bspatch_SOURCES = bspatch.c
 
-bsdiff_CFLAGS = -DBSDIFF_EXECUTABLE
+bsdiff_CFLAGS = -DBSDIFF_EXECUTABLE -Ilibdivsufsort/include
 bspatch_CFLAGS = -DBSPATCH_EXECUTABLE
 
-bsdiff_LDFLAGS = -lbz2
+bsdiff_LDFLAGS = -lbz2 -Llibdivsufsort/lib -ldivsufsort
 bspatch_LDFLAGS = -lbz2
 
 EXTRA_DIST = bsdiff.h bspatch.h
