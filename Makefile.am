@@ -16,5 +16,6 @@ include_HEADERS=bsdiff.h bspatch.h
 lib_LTLIBRARIES=libbsdiff.la
 libbsdiff_la_SOURCES=bsdiff.c bspatch.c
 
+SUBDIRS = libdivsufsort
 
 

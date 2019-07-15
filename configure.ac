@@ -1,6 +1,8 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
+AC_CONFIG_COMMANDS_POST([cd libdivsufsort; cmake . ; cd ..])
+
 AC_PREREQ([2.69])
 AC_INIT([bsdiff], [0.1])
 AC_CONFIG_SRCDIR([bsdiff.c])
@@ -32,3 +34,5 @@ AC_CHECK_FUNCS([memset])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
+
+
